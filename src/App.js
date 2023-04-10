@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Button, Form, Modal } from 'react-bootstrap';
 import axios from 'axios';
+import logo from './image 7.png'
+import menu from './image 1.png'
 
 export default class App extends Component {
     static displayName = App.name;
@@ -32,7 +34,13 @@ export default class App extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{ backgroundColor: '#BCDFEA', position: 'relative', width: '100%', height: '1000px' }}>
+                <div style={{ position: 'relative', width: '100%', height: '60px', top: '0px', background: '#4051E4' }} >
+                    <img src={logo} style={{ marginRight:'90%' }} />
+                    <img src={menu} style={{ left: '90%'}} />
+                </div>
+
+                <div style={{ position:'center' }}>
             <h1>Subscribe to receive Newsletters!</h1>
                 <Form>
                     <Form.Label style={{ color: '#01295F', fontWeight: 'bold' }}>Email: </Form.Label>
@@ -58,7 +66,8 @@ export default class App extends Component {
                         This Email has already been Unsubscribed from Newsletters.
                     </Form.Control.Feedback>
 
-                </Form>
+                    </Form>
+                </div>
             </div>
         );
     }
